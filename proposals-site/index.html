@@ -1,16 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposals</title>
-    <meta name="robots" content="noindex, nofollow">
+    <title>נדב תורג'מן - פתרונות ויעוץ AI לעסקים | אוטומציה חכמה</title>
+    <meta name="description" content="פתרונות AI ואוטומציה מתקדמים לעסקים. ייעוץ מקצועי, פיתוח מותאם אישית, ואוטומציה מלאה לתהליכים עסקיים.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Hebrew Fonts: Rubik (Headings) & Heebo (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Rubik:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-highlight: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 25%);
+            min-height: 100vh;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-heading {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #fcd34d, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+        }
+
+        .hero-mesh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hero-mesh::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.15) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Intentionally left blank or generic -->
-    <h1>404 Not Found</h1>
+<body class="antialiased selection:bg-amber-500/30 selection:text-amber-200">
+
+    <!-- Hero Section -->
+    <header class="relative pt-28 pb-24 px-6 overflow-hidden">
+        <div class="hero-mesh"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div
+                class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-bold tracking-widest uppercase mb-10 backdrop-blur-md shadow-lg shadow-blue-500/5">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+                </span>
+                פתרונות AI ואוטומציה לעסקים
+            </div>
+
+            <h1 class="text-7xl md:text-9xl font-black mb-8 tracking-tight leading-[1.1] text-white drop-shadow-2xl">
+                נדב <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-glow">תורג'מן</span>
+                <br />
+                <span class="text-5xl md:text-7xl font-light text-slate-400 block mt-2">פתרונות ויעוץ <span
+                        class="gold-gradient-text font-bold">AI</span> לעסקים</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-14 font-light leading-relaxed">
+                הופך תהליכים מורכבים לאוטומציה חכמה. פתרונות מותאמים אישית שמשחררים אותך מהשגרה ומאפשרים לך להתמקד במה שחשוב באמת.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="#contact"
+                    class="group relative bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-900 font-black py-5 px-10 rounded-2xl shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-1 overflow-hidden text-xl">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -translate-x-full">
+                    </div>
+                    <span class="relative flex items-center justify-center gap-3">
+                        בואו נתחיל
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </span>
+                </a>
+                <a href="#services"
+                    class="glass-panel text-white font-bold py-5 px-10 rounded-2xl hover:bg-white/10 transition-all transform hover:-translate-y-1 text-xl">
+                    <span class="flex items-center justify-center gap-3">
+                        מה אני מציע
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-32 space-y-32">
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">מה אני מציע</h2>
+                <p class="text-xl text-slate-400 font-light">פתרונות מותאמים אישית לכל עסק</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center mb-8 border border-blue-500/20 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-blue-500/10">
+                        <i data-lucide="zap" class="w-10 h-10 text-blue-400 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-4">אוטומציה מלאה</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">מערכות אוטומציה חכמות שמבצעות את העבודה בשבילך. מניקוב שעות ועד גבייה אוטומטית - הכל עובד ברקע.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-purple-500/10 rounded-full flex items-center justify-center mb-8 border border-purple-500/20 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-purple-500/10">
+                        <i data-lucide="brain" class="w-10 h-10 text-purple-400 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-4">ייעוץ AI</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">ייעוץ מקצועי על שילוב AI וטכנולוגיות מתקדמות בעסק שלך. מציאת הזדמנויות לשיפור ויעילות.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-emerald-500/10 rounded-full flex items-center justify-center mb-8 border border-emerald-500/20 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-emerald-500/10">
+                        <i data-lucide="layout" class="w-10 h-10 text-emerald-400 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-white mb-4">פתרונות מותאמים</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">כל פתרון נבנה במיוחד עבורך. מאפיון מדויק ועד יישום מלא - הכל מותאם לצרכים הייחודיים שלך.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">איך זה עובד?</h2>
+                <p class="text-xl text-slate-400 font-light">תהליך פשוט וברור</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center text-blue-400 font-bold text-3xl mb-8 border border-blue-500/20 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-blue-500/10">
+                        1</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">שיחה ראשונית</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">נבין יחד את הצרכים שלך, האתגרים והמטרות. נזהה את ההזדמנויות לשיפור.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-purple-500/10 rounded-full flex items-center justify-center text-purple-400 font-bold text-3xl mb-8 border border-purple-500/20 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-purple-500/10">
+                        2</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">אפיון מותאם</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">נבנה יחד את הפתרון המושלם עבורך. כל פרט מתוכנן בקפידה.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-pink-500/10 rounded-full flex items-center justify-center text-pink-400 font-bold text-3xl mb-8 border border-pink-500/20 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-pink-500/10">
+                        3</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">פיתוח ויישום</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">אני בונה את הפתרון ומטמיע אותו בעסק שלך. הכל נעשה בזהירות ובמקצועיות.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-amber-500/10 rounded-full flex items-center justify-center text-amber-400 font-bold text-3xl mb-8 border border-amber-500/20 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-amber-500/10">
+                        4</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">תמיכה מלאה</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">אחריות ותמיכה מלאה אחרי ההטמעה. אני כאן כדי לוודא שהכל עובד מושלם.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section -->
+        <section class="grid md:grid-cols-2 gap-10 relative">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-blue-500/5 to-purple-500/5 blur-3xl -z-10 rounded-full">
+            </div>
+
+            <div class="glass-card p-10 rounded-[2rem] border-t-4 border-t-red-500/50">
+                <div class="flex items-center gap-5 mb-10">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+                        <i data-lucide="alert-triangle" class="w-8 h-8 text-red-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-100">האתגרים שלך</h2>
+                </div>
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors border border-red-500/10">
+                            <i data-lucide="x" class="w-4 h-4 text-red-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-slate-100 mb-2">בזבוז זמן על משימות חוזרות</strong>
+                            <span class="text-lg text-slate-400 leading-relaxed font-light">עבודה ידנית מתישה שמונעת ממך להתמקד במה שחשוב באמת.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors border border-red-500/10">
+                            <i data-lucide="x" class="w-4 h-4 text-red-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-slate-100 mb-2">טכנולוגיה מורכבת מדי</strong>
+                            <span class="text-lg text-slate-400 leading-relaxed font-light">לא יודע איך להתחיל עם AI ואוטומציה? אני כאן כדי להדריך אותך.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-10 rounded-[2rem] border-t-4 border-t-emerald-500/50 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 blur-[100px] -z-10"></div>
+
+                <div class="flex items-center gap-5 mb-10">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">הפתרון שלי</h2>
+                </div>
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/10">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-white mb-2">אוטומציה חכמה ומותאמת</strong>
+                            <span class="text-lg text-slate-300 leading-relaxed font-light">פתרונות שמותאמים בדיוק לצרכים שלך. לא פתרונות גנריים - אלא משהו שנבנה במיוחד עבורך.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/10">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-white mb-2">ליווי מקצועי מלא</strong>
+                            <span class="text-lg text-slate-300 leading-relaxed font-light">מהרגע הראשון ועד שהכל עובד - אני כאן כדי להבטיח הצלחה.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glass-panel rounded-[2.5rem] overflow-hidden border border-white/10 relative shadow-2xl p-12 md:p-16">
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] -z-10 pointer-events-none">
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white mb-3">מוכנים להתחיל?</h2>
+                <p class="text-xl text-slate-400 mb-12 font-light">בואו נדבר על איך אני יכול לעזור לעסק שלך</p>
+
+                <div class="max-w-md mx-auto space-y-6">
+                    <a href="mailto:nadavturgeman@gmail.com"
+                        class="group relative block w-full bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-900 font-black py-5 px-8 rounded-2xl shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-1 overflow-hidden text-xl">
+                        <div
+                            class="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -translate-x-full">
+                        </div>
+                        <span class="relative flex items-center justify-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            שלחו לי הודעה
+                        </span>
+                    </a>
+                    <p class="text-sm text-slate-500 flex items-center justify-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        אשוב אליכם תוך 24 שעות
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-12 border-t border-white/5 mt-16">
+            <p class="text-slate-500 text-sm font-medium tracking-wide">נדב תורג'מן פתרונות ויעוץ AI לעסקים
+                פתרונות אוטומציה | כל הזכויות שמורות © 2025
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
