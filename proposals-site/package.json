@@ -1,0 +1,12 @@
+{
+  "name": "proposals-site",
+  "version": "1.0.0",
+  "description": "Proposals site",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
