@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="
+
+" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצעת מחיר לאוטומציה עסקית - דגנית שניר</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Hebrew Fonts: Rubik (Headings) & Heebo (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Rubik:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-highlight: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            /* Clean, modern body font */
+            background-color: #020617;
+            /* slate-950 */
+            color: #e2e8f0;
+            /* slate-200 */
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 25%);
+            min-height: 100vh;
+            font-size: 18px;
+            /* Increased base size for luxury readability */
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-heading {
+            font-family: 'Rubik', sans-serif;
+            /* Soft, modern, high-tech headings */
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #fcd34d, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+        }
+
+        .hero-mesh {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hero-mesh::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.15) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                background-image: none;
+                font-size: 12pt;
+            }
+
+            .glass-panel,
+            .glass-card {
+                background: white;
+                border: 1px solid #ddd;
+                box-shadow: none;
+                backdrop-filter: none;
+                color: black;
+            }
+
+            .text-slate-400,
+            .text-slate-500 {
+                color: #666 !important;
+            }
+
+            .text-white {
+                color: black !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-amber-500/30 selection:text-amber-200">
+
+    <!-- Hero Section -->
+    <header class="relative pt-20 md:pt-28 pb-16 md:pb-24 px-6 overflow-hidden">
+        <div class="hero-mesh"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div
+                class="inline-flex items-center gap-3 px-4 md:px-5 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs md:text-sm font-bold tracking-widest uppercase mb-8 md:mb-10 backdrop-blur-md shadow-lg shadow-blue-500/5">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+                </span>
+                הצעה לייעול ותשתית עסקית
+            </div>
+
+            <h1
+                class="text-5xl md:text-9xl font-black mb-6 md:mb-8 tracking-tight leading-[1.1] text-white drop-shadow-2xl">
+                ניהול <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-glow">אוטומטי</span>
+                <br />
+                <span class="text-3xl md:text-7xl font-light text-slate-400 block mt-2">ומודל <span
+                        class="gold-gradient-text font-bold">"בנק שעות"</span></span>
+            </h1>
+
+            <p class="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10 md:mb-14 font-light leading-relaxed">
+                הפתרון המלא שיעניק לך שקט נפשי. גבייה אוטומטית, סנכרון יומן מלא, וניהול חכם שעובד בשבילך 24/7.
+            </p>
+
+            <!-- Info Bar -->
+            <div
+                class="flex flex-col md:flex-row justify-center gap-4 md:gap-0 glass-panel rounded-2xl p-3 shadow-2xl w-full md:w-auto">
+                <div
+                    class="flex items-center gap-4 px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/5 transition-colors w-full md:w-auto">
+                    <div class="p-2 md:p-3 bg-blue-500/20 rounded-xl text-blue-400 shrink-0"><i data-lucide="user"
+                            class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider font-bold mb-1">עבור
+                        </div>
+                        <div class="text-base md:text-lg font-medium text-slate-100">דגנית שניר</div>
+                    </div>
+                </div>
+                <div class="hidden md:block w-px bg-white/10 my-3"></div>
+                <div
+                    class="flex items-center gap-4 px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/5 transition-colors w-full md:w-auto">
+                    <div class="p-2 md:p-3 bg-purple-500/20 rounded-xl text-purple-400 shrink-0"><i
+                            data-lucide="pen-tool" class="w-5 h-5 md:w-6 md:h-6"></i></div>
+                    <div class="text-right">
+                        <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider font-bold mb-1">מאת
+                        </div>
+                        <div class="text-base md:text-lg font-medium text-slate-100">נדב תורג'מן<br><span
+                                class="text-sm text-slate-400 font-normal">פתרונות ויעוץ AI לעסקים</span></div>
+                    </div>
+                </div>
+                <div class="hidden md:block w-px bg-white/10 my-3"></div>
+                <div
+                    class="flex items-center gap-4 px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/5 transition-colors w-full md:w-auto">
+                    <div class="p-2 md:p-3 bg-emerald-500/20 rounded-xl text-emerald-400 shrink-0"><i
+                            data-lucide="calendar" class="w-5 h-5 md:w-6 md:h-6"></i></div>
+                    <div class="text-right">
+                        <div class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider font-bold mb-1">תאריך
+                        </div>
+                        <div class="text-base md:text-lg font-medium text-slate-100">נובמבר 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-32 space-y-32">
+
+        <!-- Comparison Section -->
+        <section class="grid md:grid-cols-2 gap-10 relative">
+            <!-- Decorative Glow -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-blue-500/5 to-purple-500/5 blur-3xl -z-10 rounded-full">
+            </div>
+
+            <!-- The Problem -->
+            <div class="glass-card p-10 rounded-[2rem] border-t-4 border-t-red-500/50">
+                <div class="flex items-center gap-5 mb-10">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+                        <i data-lucide="alert-triangle" class="w-8 h-8 text-red-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-100">האתגר הנוכחי</h2>
+                </div>
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors border border-red-500/10">
+                            <i data-lucide="x" class="w-4 h-4 text-red-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-slate-100 mb-2">בזבוז זמן יקר</strong>
+                            <span class="text-lg text-slate-400 leading-relaxed font-light">התעסקות ידנית מתישה בסוף כל
+                                חודש עם חישובים, שליחת הודעות וגבייה.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors border border-red-500/10">
+                            <i data-lucide="x" class="w-4 h-4 text-red-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-slate-100 mb-2">תזרים מזומנים מעוכב</strong>
+                            <span class="text-lg text-slate-400 leading-relaxed font-light">עבודה במודל "Post-Paid"
+                                יוצרת חובות ואי-נעימות מול לקוחות.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- The Solution -->
+            <div class="glass-card p-10 rounded-[2rem] border-t-4 border-t-emerald-500/50 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 blur-[100px] -z-10"></div>
+
+                <div class="flex items-center gap-5 mb-10">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-emerald-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white">הפתרון המוצע</h2>
+                </div>
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/10">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-white mb-2">אוטומציה מלאה (Zero Touch)</strong>
+                            <span class="text-lg text-slate-300 leading-relaxed font-light">המערכת גובה, מחשבת ומנהלת
+                                לבד. את מקבלת רק את ההתראות החשובות.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-5 group">
+                        <div
+                            class="mt-1.5 w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/10">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-xl text-white mb-2">בנק שעות (Pre-Paid)</strong>
+                            <span class="text-lg text-slate-300 leading-relaxed font-light">הכסף נכנס מראש. הלקוח מתחייב
+                                לתהליך, ואת נמנעת מאי-נעימויות.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Workflow Steps -->
+        <section>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">איך זה עובד?</h2>
+                <p class="text-xl text-slate-400 font-light">תהליך חכם, פשוט ושקוף</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-blue-500/10 rounded-full flex items-center justify-center text-blue-400 font-bold text-3xl mb-8 border border-blue-500/20 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-blue-500/10">
+                        1</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">רכישה דיגיטלית</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">הלקוח רוכש חבילה בלינק מאובטח. חשבונית
+                        נשלחת אוטומטית.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-purple-500/10 rounded-full flex items-center justify-center text-purple-400 font-bold text-3xl mb-8 border border-purple-500/20 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-purple-500/10">
+                        2</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">שיבוץ ביומן</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">את משבצת ב-Google Calendar כרגיל. אין
+                        צורך ללמוד מערכת חדשה.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-pink-500/10 rounded-full flex items-center justify-center text-pink-400 font-bold text-3xl mb-8 border border-pink-500/20 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-pink-500/10">
+                        3</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">"ניקוב" אוטומטי</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">המערכת מזהה שהאימון בוצע ומעדכנת את
+                        יתרת הלקוח ברקע.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="glass-card p-8 rounded-3xl text-center group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-amber-500/10 rounded-full flex items-center justify-center text-amber-400 font-bold text-3xl mb-8 border border-amber-500/20 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-xl shadow-amber-500/10">
+                        4</div>
+                    <h3 class="font-bold text-2xl text-white mb-4">חידוש חכם</h3>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">יתרה נמוכה? הלקוח מקבל הודעה אוטומטית
+                        לחידוש החבילה.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & Investment -->
+        <section class="glass-panel rounded-[2.5rem] overflow-hidden border border-white/10 relative shadow-2xl">
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] -z-10 pointer-events-none">
+            </div>
+
+            <div class="grid md:grid-cols-3">
+                <div class="md:col-span-2 p-12 md:p-16">
+                    <h2 class="text-4xl font-bold text-white mb-3 text-center md:text-right">השקעה בפרויקט</h2>
+                    <p class="text-xl text-slate-400 mb-12 font-light">חבילת Turn-key Solution - הכל כלול.</p>
+
+                    <div class="space-y-6">
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 text-center md:text-right">
+                            <div
+                                class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400 shadow-lg shadow-emerald-500/10">
+                                <i data-lucide="check" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xl text-slate-200 font-light">אפיון תהליך עבודה מותאם אישית</span>
+                        </div>
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 text-center md:text-right">
+                            <div
+                                class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400 shadow-lg shadow-emerald-500/10">
+                                <i data-lucide="layout" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xl text-slate-200 font-light">הקמת דאשבורד ניהול מתקדם (Airtable)</span>
+                        </div>
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 text-center md:text-right">
+                            <div
+                                class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400 shadow-lg shadow-emerald-500/10">
+                                <i data-lucide="credit-card" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xl text-slate-200 font-light">חיבור מלא למערכת סליקה (Meshulam)</span>
+                        </div>
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-6 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 text-center md:text-right">
+                            <div
+                                class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400 shadow-lg shadow-emerald-500/10">
+                                <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xl text-slate-200 font-light">אוטומציה וסנכרון מלא ליומן Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/5 p-12 md:p-16 flex flex-col justify-center items-center text-center border-r border-white/10 backdrop-blur-sm">
+                    <div class="text-slate-400 text-sm mb-4 font-bold uppercase tracking-[0.2em]">מחיר הפרויקט (חד פעמי)
+                    </div>
+                    <div class="text-7xl font-black text-white mb-3 tracking-tight drop-shadow-2xl">₪2,950</div>
+                    <div class="text-slate-500 text-lg mb-12 font-medium">+ מע"מ כחוק</div>
+
+                    <div class="w-full space-y-6 no-print">
+                        <a href="#"
+                            class="group relative block w-full bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-900 font-black py-5 px-8 rounded-2xl shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-1 overflow-hidden text-xl">
+                            <div
+                                class="absolute inset-0 w-full h-full bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -translate-x-full">
+                            </div>
+                            <span class="relative flex items-center justify-center gap-3">
+                                לאישור ותשלום מקדמה
+                                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                            </span>
+                        </a>
+                        <p class="text-xs text-slate-500 flex items-center justify-center gap-2 opacity-70">
+                            <i data-lucide="lock" class="w-3 h-3"></i>
+                            תשלום מאובטח וחשבונית אוטומטית
+                        </p>
+                    </div>
+
+                    <div class="mt-10 pt-10 border-t border-white/10 w-full">
+                        <div
+                            class="text-sm font-bold text-emerald-400 bg-emerald-500/10 py-3 px-6 rounded-full inline-block border border-emerald-500/20">
+                            זמן אספקה: 14 ימי עסקים
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms & Conditions -->
+        <section class="pt-12 border-t border-white/5">
+            <h3
+                class="text-2xl font-bold text-white mb-10 flex flex-col md:flex-row items-center justify-center md:justify-start gap-4">
+                <i data-lucide="file-text" class="w-6 h-6 text-slate-400"></i>
+                נספח תנאים ואחריות
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl text-center md:text-right">
+                    <div
+                        class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 mx-auto md:mx-0">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-200 mb-3 text-lg">תשתיות וצד שלישי</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4 font-light">
+                        המערכת מתבססת על כלים חיצוניים. תשלום לספקים (במידה ונדרש) מתבצע ישירות מולם:
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-500 inline-block text-right">
+                        <li class="flex items-center gap-3 justify-center md:justify-start">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
+                            <span><strong>Make:</strong> חינם / כ-9$ בחודש</span>
+                        </li>
+                        <li class="flex items-center gap-3 justify-center md:justify-start">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>
+                            <span><strong>Airtable:</strong> חינם (עד 1k רשומות)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl text-center md:text-right">
+                    <div
+                        class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-400 mx-auto md:mx-0">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-200 mb-3 text-lg">אחריות ותמיכה</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4 font-light">
+                        אחריות מלאה למשך <strong>30 ימים</strong> מרגע העלייה לאוויר (Go Live).
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-500 inline-block text-right">
+                        <li class="flex items-center gap-3 justify-center md:justify-start">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            <span>תיקון באגים ואי-התאמות לאפיון</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl text-center md:text-right">
+                    <div
+                        class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-6 text-amber-400 mx-auto md:mx-0">
+                        <i data-lucide="credit-card" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-200 mb-3 text-lg">תנאי תשלום</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-sm border-b border-white/10 pb-3">
+                            <span class="text-slate-400">מקדמה (חתימה)</span>
+                            <span class="font-bold text-white">50%</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-400">גמר חשבון (מסירה)</span>
+                            <span class="font-bold text-white">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-12 border-t border-white/5 mt-16">
+            <p class="text-slate-500 text-sm font-medium tracking-wide">נדב תורג'מן פתרונות ויעוץ AI לעסקים
+                פתרונות אוטומציה | כל הזכויות שמורות © 2025
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
